@@ -107,7 +107,7 @@ margin-bottom: 5%
 	</div>	
 </body>
 </html>
-<%@include file="footer.jsp"%>	
+<%@include file="footer.jsp"%>
 <script>
 	//헤더 부분
 	if($(window).width() >= 400) {
