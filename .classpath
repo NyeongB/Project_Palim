@@ -11,5 +11,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/src/mybatis-3.4.5.jar"/>
 	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/src/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/src/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
