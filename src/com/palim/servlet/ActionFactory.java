@@ -16,10 +16,10 @@ public class ActionFactory {
 		case "loginUI":
 			a = new LoginUI();
 			break;
+			/*
 		case "updateMainUI":
 			a = new UpdateMainUI();
 			break;
-			/*
 		case "updateNicknameUI":
 			a = new UpdateNicknameUI();
 			break;
@@ -62,16 +62,17 @@ public class ActionFactory {
 		case "loginAction":
 			a=new LoginAction();
 			break;
-			/*
 		case "logoutAction":
 			a = new LogoutAction();
 			break;
+			/*
 		case "findPWSetPWAction" :
 			a= new FindPWSetPWAction();
 			break;
 		case "dropUserAction" :
 			a= new DropUserAction();
 			break;
+			*/
 		case "checkIDAction" :
 			a = new CheckIDAction();
 			break;
@@ -81,12 +82,13 @@ public class ActionFactory {
 		case "checkPhoneAction" :
 			a = new CheckPhoneAction();
 			break;
+			/*
 		case "findIDAction":
 			a=new FindIDAction();
 			break;			
 		case "findPWEmailAction":
 			a=new FindPWEmailAction();
-			break;					
+			break;			
 		case "updateMainAction":
 			a=new UpdateMainAction();
 			break;	
@@ -111,9 +113,11 @@ public class ActionFactory {
 		case "seizeTodayAction" : 
 			a = new SeizeTodayAction();
 			break;			
+			*/
 		case "sendCertificateNumberAction" :
 			a = new SendCertificateNumberAction();
 			break;	
+			/*
 		case "hopeListOrderAction" :
 			a = new HopeListOrderAction();
           	break;
