@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hopeDataMapper">
+
+<insert id="addHopeList" parameterType="HashMap">
+insert into hope_data (hope_data_seq, regi_day, product_id, product_img, product_link, product_title, hope_price, product_flag, user_id) 
+values (hope_data_seq.nextval, to_char(sysdate, 'yyyy/mm/dd'),#{productID},#{productImg},#{productLink},#{productTitle},#{hopePrice},0,#{userID})
+</insert>
+
+<insert id="addLowPricePerDay" parameterType="HashMap">
+insert into lprice_per_day (lpd_seq, lprice, lprice_upday, product_type, hope_data_seq) 
+values (lpd_seq.nextval, #{lprice},  to_char(sysdate, 'yyyy/mm/dd'), #{productType}, #{hopeDataSeq})
+</insert>
+
+<select id="checkDuplicateHopeProduct" parameterType="HashMap" resultType="HashMap">
+select product_id from hope_data where user_id=#{userID} and product_id=#{productID} and product_flag=0
+</select>
+
+<select id="getAllHopeListToday" resultType="HashMap">
+select h.product_id, h.product_title, h.product_img, h.product_link, l.lprice from hope_data h, lprice_per_day l 
+where h.hope_data_seq=l.hope_data_seq and to_char(sysdate, 'yyyy/mm/dd')=l.lprice_upday
+</select>
+
+<select id="getAllHopeListYesterday" resultType="HashMap">
+select h.product_id, h.product_id, h.product_title, h.product_img, h.product_link, l.lprice from hope_data h, lprice_per_day l 
+where h.hope_data_seq=l.hope_data_seq and to_char(sysdate-1, 'yyyy/mm/dd')=l.lprice_upday
+</select>
+
+<update id="updateHopePrice" parameterType="HashMap" >
+update hope_data set hope_price = #{hopePrice} where product_id = #{productID} and user_id= #{userID} and product_flag=0
+</update>	
+
+<update id="deleteHopeProduct" parameterType="HashMap" >
+update hope_data set product_flag=1 where product_id=#{productID} and user_id=#{userID}
+</update>	
+
+<update id="deleteHopeData" parameterType="String">
+update hope_data set product_flag=1 where user_id=#{userID}
+</update>
+
+<select id="getLowPriceFirstDay" parameterType="HashMap" resultType="Integer">
+select A.lprice from (select lprice from hope_data h, lprice_per_day l
+where h.hope_data_seq=l.hope_data_seq and product_id=#{productID} and user_id=#{userID} order by lprice_upday) A where rownum=1
+</select>
+
+<select id="orderByRegistrationPage" parameterType="HashMap" resultType="HashMap">
+select E.product_id, E.product_img, E.product_link, E.product_title, E.hope_price, E.lprice, regi_day
+from (select rownum as rnum, A.product_id, A.product_img, A.product_link, A.product_title, A.hope_price, A.lprice, to_char(A.regi_day, 'YYYY/MM/DD') as regi_day
+from (select h.product_id, h.product_img, h.product_link, h.product_title, h.hope_price, l.lprice, h.regi_day 
+from hope_data h, lprice_per_day l where h.hope_data_seq=l.hope_data_seq and h.product_flag=0 and h.user_id=#{userID} and to_char(sysdate, 'yyyy/mm/dd')=l.lprice_upday 
+order by h.regi_day) A) E where rnum <![CDATA[ > ]]> #{minRowNum} and rnum <![CDATA[ <= ]]> #{maxRowNum}
+</select>
+
+<select id="orderByRegistrationDescPage" parameterType="HashMap" resultType="HashMap">
+select E.product_id, E.product_img, E.product_link, E.product_title, E.hope_price, E.lprice, regi_day
+from (select rownum as rnum, A.product_id, A.product_img, A.product_link, A.product_title, A.hope_price, A.lprice, to_char(A.regi_day, 'YYYY/MM/DD') as regi_day
+from (select h.product_id, h.product_img, h.product_link, h.product_title, h.hope_price, l.lprice, h.regi_day 
+from hope_data h, lprice_per_day l where h.hope_data_seq=l.hope_data_seq and h.product_flag=0 and h.user_id=#{userID} and to_char(sysdate, 'yyyy/mm/dd')=l.lprice_upday 
+order by h.regi_day desc) A) E where rnum <![CDATA[ > ]]> #{minRowNum} and rnum <![CDATA[ <= ]]> #{maxRowNum}
+</select>
+
+<select id="orderByLowPricePage" parameterType="HashMap" resultType="HashMap">
+select E.product_id, E.product_img, E.product_link, E.product_title, E.hope_price, E.lprice, regi_day
+from (select rownum as rnum, A.product_id, A.product_img, A.product_link, A.product_title, A.hope_price, A.lprice, to_char(A.regi_day, 'YYYY/MM/DD') as regi_day
+from (select h.product_id, h.product_img, h.product_link, h.product_title, h.hope_price, l.lprice, h.regi_day 
+from hope_data h, lprice_per_day l where h.hope_data_seq=l.hope_data_seq and h.product_flag=0 and h.user_id=#{userID} and to_char(sysdate, 'yyyy/mm/dd')=l.lprice_upday 
+order by l.lprice) A) E where rnum <![CDATA[ > ]]> #{minRowNum} and rnum <![CDATA[ <= ]]> #{maxRowNum}
+</select>
+
+<select id="orderByHopePricePage" parameterType="HashMap" resultType="HashMap">
+select E.product_id, E.product_img, E.product_link, E.product_title, E.hope_price, E.lprice, regi_day
+from (select rownum as rnum, A.product_id, A.product_img, A.product_link, A.product_title, A.hope_price, A.lprice, to_char(A.regi_day, 'YYYY/MM/DD') as regi_day
+from (select h.product_id, h.product_img, h.product_link, h.product_title, h.hope_price, l.lprice, h.regi_day 
+from hope_data h, lprice_per_day l where h.hope_data_seq=l.hope_data_seq and h.product_flag=0 and h.user_id=#{userID} and to_char(sysdate, 'yyyy/mm/dd')=l.lprice_upday 
+order by h.hope_price) A) E where rnum <![CDATA[ > ]]> #{minRowNum} and rnum <![CDATA[ <= ]]> #{maxRowNum}
+</select>
+
+<select id="getProductInfo" resultType="HashMap">
+select hope_data_seq, product_id from hope_data
+</select>
+
+<select id="getLowPrice" parameterType="HashMap" resultType="HashMap">
+select lprice, to_char(lprice_upday, 'MM/DD') as lprice_upday from hope_data h, lprice_per_day l 
+where h.hope_data_seq=l.hope_data_seq and product_id=#{productID} and user_id=#{userID} and product_flag=0 order by l.lprice_upday
+</select>
+
+<select id="countAllHopeData" parameterType="String" resultType="Integer">
+select count(*) as total_cnt from hope_data where user_id=#{userID} and product_flag=0
+</select>
+
+<select id="sendAlarm" parameterType="String" resultType="HashMap"> 
+select A.user_id, A.phone, A.alarm, A.product_title, A.nickname, A.product_link, A.hope_price from
+(select h.hope_price, h.product_title, h.product_link, l.lprice, u.nickname, u.user_id, u.phone, u.alarm from user_data u, lprice_per_day l, hope_data h 
+where product_id=#{productID} and product_flag=0 and h.hope_data_seq=l.hope_data_seq and u.user_id=h.user_id and to_char(sysdate, 'yyyy/mm/dd')=l.lprice_upday) A where 
+A.hope_price<![CDATA[ >= ]]>A.lprice
+</select>
+
+<select id="getHopeDataSeq" parameterType="HashMap" resultType="Integer">
+select hope_data_seq from hope_data where user_id=#{userID} and product_id=#{productID} and product_flag=0
+
+
+</select>
+</mapper>

@@ -9,11 +9,10 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/src/mybatis-3.4.5.jar"/>
-	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/src/ojdbc14.jar"/>
-	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/src/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/mediaProject/java-sdk-2.2/lib/javaSDK-2.2.jar"/>
-	<classpathentry kind="lib" path="C:/mediaProject/java-sdk-2.2/source/javaSDK-2.2-sources.jar"/>
-	<classpathentry kind="lib" path="C:/mediaProject/Project_Palim_Final/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/mail-1.4.7.jar"/>
+	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/mybatis-3.4.5.jar"/>
+	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/ojdbc14.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
