@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/mail-1.4.7.jar"/>
 	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/mybatis-3.4.5.jar"/>
 	<classpathentry kind="lib" path="C:/Project_Palim/WebContent/WEB-INF/lib/ojdbc14.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
