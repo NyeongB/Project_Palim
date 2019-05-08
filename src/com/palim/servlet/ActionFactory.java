@@ -26,9 +26,11 @@ public class ActionFactory {
 		case "updatePhoneUI":
 			a = new UpdatePhoneUI();
 			break;
+			*/
 		case "updatePWUI":
 			a = new UpdatePWUI();
 			break;
+			/*
 		case "updateAlarmUI":
 			a = new UpdateAlarmUI();
 			break;
