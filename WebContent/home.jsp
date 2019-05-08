@@ -20,7 +20,7 @@ a, .w3-button {
 	font-size: 14pt;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:400px) { 
 #seizeImg {
 	width:40%;
 }
