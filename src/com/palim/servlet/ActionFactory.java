@@ -16,10 +16,10 @@ public class ActionFactory {
 		case "loginUI":
 			a = new LoginUI();
 			break;
-			/*
 		case "updateMainUI":
 			a = new UpdateMainUI();
 			break;
+			/*
 		case "updateNicknameUI":
 			a = new UpdateNicknameUI();
 			break;
@@ -35,9 +35,11 @@ public class ActionFactory {
 		case "dropUserUI":
 			a = new DropUserUI();
 			break;
+			*/
 		case "hopeListUI":
 			a = new HopeListUI();
 			break;
+			/*
 		case "insertHpriceUI" : 
 			a = new InsertHpriceUI();
 			break;
