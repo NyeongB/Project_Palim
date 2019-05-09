@@ -92,16 +92,19 @@ public class ActionFactory {
 			break;			
 		case "findPWEmailAction":
 			a=new FindPWEmailAction();
-			break;			
+			break;		*/
+			
 		case "updateMainAction":
 			a=new UpdateMainAction();
 			break;	
+			/*
 		case "updatePhoneAction" : 
 			a = new UpdatePhoneAction();
-			break;			
+			break;	*/		
 		case "updatePWAction" : 
 			a = new UpdatePWAction();
-			break;			
+			break;		
+			/*
 		case "updateAlarmAction" :
 			a= new UpdateAlarmAction();
 			break;
