@@ -87,7 +87,7 @@ margin-left:25%
 	               $("#logincheck").html("아이디 혹은 비밀번호를 확인해주세요");
 	            } else{
 	               $("#logincheck").html('');      
-	               location.href="controller?cmd=homeUI" ;   
+	               location.href="controller?cmd=homeUI" ;
 	            } 
 	         }         
 	      })

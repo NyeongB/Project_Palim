@@ -19,25 +19,21 @@ public class ActionFactory {
 		case "updateMainUI":
 			a = new UpdateMainUI();
 			break;
-			/*
 		case "updateNicknameUI":
 			a = new UpdateNicknameUI();
 			break;
 		case "updatePhoneUI":
 			a = new UpdatePhoneUI();
 			break;
-			*/
 		case "updatePWUI":
 			a = new UpdatePWUI();
 			break;
-			/*
 		case "updateAlarmUI":
 			a = new UpdateAlarmUI();
 			break;
 		case "dropUserUI":
 			a = new DropUserUI();
 			break;
-			*/
 		case "hopeListUI":
 			a = new HopeListUI();
 			break;
@@ -73,10 +69,10 @@ public class ActionFactory {
 		case "findPWSetPWAction" :
 			a= new FindPWSetPWAction();
 			break;
+			*/
 		case "dropUserAction" :
 			a= new DropUserAction();
 			break;
-			*/
 		case "checkIDAction" :
 			a = new CheckIDAction();
 			break;
@@ -93,24 +89,22 @@ public class ActionFactory {
 		case "findPWEmailAction":
 			a=new FindPWEmailAction();
 			break;		*/
-			
 		case "updateMainAction":
 			a=new UpdateMainAction();
 			break;	
-			/*
 		case "updatePhoneAction" : 
 			a = new UpdatePhoneAction();
-			break;	*/		
+			break;
 		case "updatePWAction" : 
 			a = new UpdatePWAction();
 			break;		
-			/*
 		case "updateAlarmAction" :
 			a= new UpdateAlarmAction();
 			break;
 		case "updateNicknameAction" : 
 			a = new UpdateNicknameAction();
 			break;		
+			/*
 		case "checkDuplicateHopeProductAction" : 
 			a = new CheckDuplicateHopeProductAction();
 			break;
