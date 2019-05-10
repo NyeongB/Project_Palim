@@ -1,0 +1,80 @@
+-- 회원정보
+CREATE TABLE user_data (
+	user_id  VARCHAR2(320) NOT NULL, -- 아이디(이메일)
+	password VARCHAR2(15)  NOT NULL, -- 비밀번호
+	nickname NVARCHAR2(15) NOT NULL, -- 닉네임
+	phone    VARCHAR2(11)  NOT NULL, -- 휴대폰번호
+	alarm    CHAR(1)       NOT NULL, -- 알림수신방법설정
+	flag     NUMBER(1,0)   NOT NULL  -- 탈퇴플래그
+);
+
+-- 회원정보
+ALTER TABLE user_data
+	ADD
+		CONSTRAINT PK_user_data -- 회원정보 기본키3
+		PRIMARY KEY (
+			user_id -- 아이디(이메일)
+		);
+
+-- 희망상품정보
+CREATE TABLE hope_data (
+	hope_data_seq NUMBER(3,0)   NOT NULL, -- 희망상품_일련번호
+	regi_day      DATE          NOT NULL, -- 희망상품등록날짜
+	product_id    NUMBER(20,0)  NOT NULL, -- 상품아이디
+	product_img   VARCHAR2(512) NOT NULL, -- 상품이미지
+	product_link  VARCHAR2(512) NOT NULL, -- 상품링크
+	product_title VARCHAR2(100) NOT NULL, -- 상품명
+	hope_price    NUMBER(9,0)   NOT NULL, -- 희망가격
+	product_flag  number(1,0)   NOT NULL, -- 희망상품삭제플래그
+	user_id       VARCHAR2(320) NOT NULL  -- 아이디(이메일)
+);
+
+-- 희망상품정보
+ALTER TABLE hope_data
+	ADD
+		CONSTRAINT PK_hope_data -- 희망상품정보 기본키5
+		PRIMARY KEY (
+			hope_data_seq -- 희망상품_일련번호
+		);
+
+-- 희망상품날짜별최저가정보
+CREATE TABLE lprice_per_day (
+	lpd_seq       NUMBER(4,0) NOT NULL, -- 날짜별최저가정보_일련번호
+	lprice        NUMBER(9,0) NOT NULL, -- 상품최저가
+	lprice_upday  DATE        NOT NULL, -- 상품최저가업데이트날짜
+	product_type  NUMBER(1,0) NOT NULL, -- 상품상태플래그
+	hope_data_seq NUMBER(3,0) NOT NULL  -- 희망상품_일련번호
+);
+
+-- 희망상품날짜별최저가정보
+ALTER TABLE lprice_per_day
+	ADD
+		CONSTRAINT PK_lprice_per_day -- 희망상품날짜별최저가정보 기본키2
+		PRIMARY KEY (
+			lpd_seq -- 날짜별최저가정보_일련번호
+		);
+
+-- 희망상품정보
+ALTER TABLE hope_data
+	ADD
+		CONSTRAINT FK_user_data_TO_hope_data -- 회원정보 -> 희망상품정보3
+		FOREIGN KEY (
+			user_id -- 아이디(이메일)
+		)
+		REFERENCES user_data ( -- 회원정보
+			user_id -- 아이디(이메일)
+		);
+
+-- 희망상품날짜별최저가정보
+ALTER TABLE lprice_per_day
+	ADD
+		CONSTRAINT FK_hope_data_TO_lprice_per_day -- 희망상품정보 -> 희망상품날짜별최저가정보2
+		FOREIGN KEY (
+			hope_data_seq -- 희망상품_일련번호
+		)
+		REFERENCES hope_data ( -- 희망상품정보
+			hope_data_seq -- 희망상품_일련번호
+		);
+
+create sequence hope_data_seq;
+create sequence lpd_seq;
