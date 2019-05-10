@@ -44,9 +44,11 @@ public class ActionFactory {
 		case "seizeTodayUI" : 
 			a = new SeizeTodayUI();
 			break;			
+			*/
 		case "findIDUI":
 			a=new FindIDUI();
 			break;
+			/*
 		case "findPWEmailUI":
 			a=new FindPWEmailUI();
 			break;			
@@ -82,10 +84,10 @@ public class ActionFactory {
 		case "checkPhoneAction" :
 			a = new CheckPhoneAction();
 			break;
-			/*
 		case "findIDAction":
 			a=new FindIDAction();
 			break;			
+			/*
 		case "findPWEmailAction":
 			a=new FindPWEmailAction();
 			break;		*/
