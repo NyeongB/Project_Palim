@@ -48,16 +48,15 @@ public class ActionFactory {
 		case "findIDUI":
 			a=new FindIDUI();
 			break;
-			/*
 		case "findPWEmailUI":
 			a=new FindPWEmailUI();
-			break;			
+			break;
 		case "findPWPhoneUI":
 			a=new FindPWPhoneUI();
 			break;			
 		case "findPWSetPWUI":
 			a=new FindPWSetPWUI();
-			break;		*/
+			break;
 		case "addMemberAction":
 			a= new AddMemberAction();
 			break;
@@ -67,11 +66,9 @@ public class ActionFactory {
 		case "logoutAction":
 			a = new LogoutAction();
 			break;
-			/*
 		case "findPWSetPWAction" :
 			a= new FindPWSetPWAction();
 			break;
-			*/
 		case "dropUserAction" :
 			a= new DropUserAction();
 			break;
@@ -87,10 +84,9 @@ public class ActionFactory {
 		case "findIDAction":
 			a=new FindIDAction();
 			break;			
-			/*
 		case "findPWEmailAction":
 			a=new FindPWEmailAction();
-			break;		*/
+			break;
 		case "updateMainAction":
 			a=new UpdateMainAction();
 			break;	
