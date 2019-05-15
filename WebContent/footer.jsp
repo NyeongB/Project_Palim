@@ -43,9 +43,9 @@
     <div class="w3-third">
       	<h5>Follow us</h5>
       	<p style="margin:3">
-			<a href="https://www.facebook.com/profile.php?id=100026074050092" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i ></a>
-		    <a href="https://www.instagram.com/palim8282/" target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-xlarge"></i></a>
-			<a href="https://twitter.com/Palim8282" target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-xlarge" ></i></a>     
+			<a target="_blank"><i class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i ></a>
+		    <a  target="_blank"><i class="fa fa-instagram w3-hover-opacity w3-xlarge"></i></a>
+			<a  target="_blank"><i class="fa fa-twitter w3-hover-opacity w3-xlarge" ></i></a>     
 		</p>
 		<p class="footer"> CopyRightⓒ Palim Corp.</p>
 		<p class="footer"> All Rights Reserved </p>
@@ -54,8 +54,8 @@
 		<div class="text w3-panel" style="text-align: right; margin-right: 40%">
 			<h5>About Palim</h5>
 			<p class="footer"> 상호명 : (주) Palim </p>
-			<p class="footer"> 이메일 : palim8282@naver.com </p>
-			<p class="footer"> 주소 : 서울특별시 송파구 가락본동 중대로 135 </p>
+			<p class="footer"> 이메일 : kdtoaj14@ajou.ac.kr </p>
+			<p class="footer"> 주소 : 아주대학교 </p>
 		</div>
     </div>
   </div>
