@@ -102,13 +102,14 @@ public class ActionFactory {
 		case "updateNicknameAction" : 
 			a = new UpdateNicknameAction();
 			break;		
-			/*
-		case "checkDuplicateHopeProductAction" : 
-			a = new CheckDuplicateHopeProductAction();
-			break;
+			
+//		case "checkDuplicateHopeProductAction" : 
+//			a = new CheckDuplicateHopeProductAction();
+//			break;
 		case "insertHpriceAction" : 
 			a = new InsertHpriceAction();
 			break;		
+			/*
 		case "seizeTodayAction" : 
 			a = new SeizeTodayAction();
 			break;			
