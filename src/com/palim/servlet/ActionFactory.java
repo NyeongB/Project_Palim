@@ -103,9 +103,9 @@ public class ActionFactory {
 			a = new UpdateNicknameAction();
 			break;		
 			
-//		case "checkDuplicateHopeProductAction" : 
-//			a = new CheckDuplicateHopeProductAction();
-//			break;
+		case "checkDuplicateHopeProductAction" : 
+			a = new CheckDuplicateHopeProductAction();
+			break;
 		case "insertHpriceAction" : 
 			a = new InsertHpriceAction();
 			break;		
