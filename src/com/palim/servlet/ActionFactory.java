@@ -128,9 +128,11 @@ public class ActionFactory {
 		case "hopeListNextPageAction" :
 			a = new HopeListNextPageAction();
 			break;
+			
 		case "hopeListPreviousPageAction" :
 			a = new HopeListPreviousPageAction();
 			break;
+			*/
 		case "updateHpriceAction" : 
 			a = new UpdateHpriceAction();
 			break;
@@ -140,7 +142,7 @@ public class ActionFactory {
 		case "getLpriceFirstDayAction" :
 			a = new GetLpriceFirstDayAction();
 			break;
-			*/
+			
 			
 		case "sendAction" :
 			a = new SendAction();
