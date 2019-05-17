@@ -147,13 +147,14 @@ public class ActionFactory {
 		case "sendAction" :
 			a = new SendAction();
 			break;
-			/*
+			
 		case "searchAction" :
 			a = new SearchAction();
 			break;
 		case "searchListAction" :
 			a = new SearchListAction();
 			break;	
+			/*
 		case "pimgPreviousPageAction" :
 			a = new PimgPreviousPageAction();
 			break;
@@ -172,9 +173,11 @@ public class ActionFactory {
 		case "plistPageAction" :
 			a = new PlistPageAction();
 			break;
+			*/
 		case "searchAppAction" :
 			a = new SearchAppAction();
 			break;
+			/*
 		case "pimgAppPageAction" :
 			a = new PimgAppPageAction();
 			break;
