@@ -118,7 +118,7 @@ public class ActionFactory {
 		case "sendCertificateNumberAction" :
 			a = new SendCertificateNumberAction();
 			break;	
-			/*
+			
 		case "hopeListOrderAction" :
 			a = new HopeListOrderAction();
           	break;
@@ -132,7 +132,7 @@ public class ActionFactory {
 		case "hopeListPreviousPageAction" :
 			a = new HopeListPreviousPageAction();
 			break;
-			*/
+			
 		case "updateHpriceAction" : 
 			a = new UpdateHpriceAction();
 			break;
