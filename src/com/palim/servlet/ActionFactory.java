@@ -37,10 +37,11 @@ public class ActionFactory {
 		case "hopeListUI":
 			a = new HopeListUI();
 			break;
-			/*
+			
 		case "insertHpriceUI" : 
 			a = new InsertHpriceUI();
 			break;
+			/*
 		case "seizeTodayUI" : 
 			a = new SeizeTodayUI();
 			break;			
@@ -139,9 +140,12 @@ public class ActionFactory {
 		case "getLpriceFirstDayAction" :
 			a = new GetLpriceFirstDayAction();
 			break;
+			*/
+			
 		case "sendAction" :
 			a = new SendAction();
 			break;
+			/*
 		case "searchAction" :
 			a = new SearchAction();
 			break;
