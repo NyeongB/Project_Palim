@@ -41,11 +41,11 @@ public class ActionFactory {
 		case "insertHpriceUI" : 
 			a = new InsertHpriceUI();
 			break;
-			/*
+			
 		case "seizeTodayUI" : 
 			a = new SeizeTodayUI();
 			break;			
-			*/
+			
 		case "findIDUI":
 			a=new FindIDUI();
 			break;
@@ -110,11 +110,11 @@ public class ActionFactory {
 		case "insertHpriceAction" : 
 			a = new InsertHpriceAction();
 			break;		
-			/*
+			
 		case "seizeTodayAction" : 
 			a = new SeizeTodayAction();
 			break;			
-			*/
+			
 		case "sendCertificateNumberAction" :
 			a = new SendCertificateNumberAction();
 			break;	
@@ -181,13 +181,14 @@ public class ActionFactory {
 		case "pimgAppPageAction" :
 			a = new PimgAppPageAction();
 			break;
+			*/
 		case "seizeTodayAppAction" :
 			a = new SeizeTodayAppAction();
 			break;
 		case "seizeTodayAppPageAction" :
 			a = new SeizeTodayAppPageAction();
 			break;
-			*/
+			
 		default :
 			a = new HomeUI();
 			break;		
