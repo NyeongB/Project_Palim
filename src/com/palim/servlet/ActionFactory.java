@@ -2,11 +2,12 @@ package com.palim.servlet;
 
 public class ActionFactory {
 	private ActionFactory() {
-		
+
 	}
-		public static Action getAction(String cmd){
+
+	public static Action getAction(String cmd) {
 		Action a = null;
-		switch(cmd) {
+		switch (cmd) {
 		case "homeUI":
 			a = new HomeUI();
 			break;
@@ -37,161 +38,145 @@ public class ActionFactory {
 		case "hopeListUI":
 			a = new HopeListUI();
 			break;
-			
-		case "insertHpriceUI" : 
+
+		case "insertHpriceUI":
 			a = new InsertHpriceUI();
 			break;
-			
-		case "seizeTodayUI" : 
+		case "seizeTodayUI":
 			a = new SeizeTodayUI();
-			break;			
-			
+			break;
 		case "findIDUI":
-			a=new FindIDUI();
+			a = new FindIDUI();
 			break;
 		case "findPWEmailUI":
-			a=new FindPWEmailUI();
+			a = new FindPWEmailUI();
 			break;
 		case "findPWPhoneUI":
-			a=new FindPWPhoneUI();
-			break;			
+			a = new FindPWPhoneUI();
+			break;
 		case "findPWSetPWUI":
-			a=new FindPWSetPWUI();
+			a = new FindPWSetPWUI();
 			break;
 		case "addMemberAction":
-			a= new AddMemberAction();
+			a = new AddMemberAction();
 			break;
 		case "loginAction":
-			a=new LoginAction();
+			a = new LoginAction();
 			break;
 		case "logoutAction":
 			a = new LogoutAction();
 			break;
-		case "findPWSetPWAction" :
-			a= new FindPWSetPWAction();
+		case "findPWSetPWAction":
+			a = new FindPWSetPWAction();
 			break;
-		case "dropUserAction" :
-			a= new DropUserAction();
+		case "dropUserAction":
+			a = new DropUserAction();
 			break;
-		case "checkIDAction" :
+		case "checkIDAction":
 			a = new CheckIDAction();
 			break;
-		case "checkNicknameAction" :
+		case "checkNicknameAction":
 			a = new CheckNicknameAction();
 			break;
-		case "checkPhoneAction" :
+		case "checkPhoneAction":
 			a = new CheckPhoneAction();
 			break;
 		case "findIDAction":
-			a=new FindIDAction();
-			break;			
+			a = new FindIDAction();
+			break;
 		case "findPWEmailAction":
-			a=new FindPWEmailAction();
+			a = new FindPWEmailAction();
 			break;
 		case "updateMainAction":
-			a=new UpdateMainAction();
-			break;	
-		case "updatePhoneAction" : 
+			a = new UpdateMainAction();
+			break;
+		case "updatePhoneAction":
 			a = new UpdatePhoneAction();
 			break;
-		case "updatePWAction" : 
+		case "updatePWAction":
 			a = new UpdatePWAction();
-			break;		
-		case "updateAlarmAction" :
-			a= new UpdateAlarmAction();
 			break;
-		case "updateNicknameAction" : 
+		case "updateAlarmAction":
+			a = new UpdateAlarmAction();
+			break;
+		case "updateNicknameAction":
 			a = new UpdateNicknameAction();
-			break;		
-			
-		case "checkDuplicateHopeProductAction" : 
+			break;
+		case "checkDuplicateHopeProductAction":
 			a = new CheckDuplicateHopeProductAction();
 			break;
-		case "insertHpriceAction" : 
+		case "insertHpriceAction":
 			a = new InsertHpriceAction();
-			break;		
-			
-		case "seizeTodayAction" : 
+			break;
+		case "seizeTodayAction":
 			a = new SeizeTodayAction();
-			break;			
-			
-		case "sendCertificateNumberAction" :
+			break;
+		case "sendCertificateNumberAction":
 			a = new SendCertificateNumberAction();
-			break;	
-			
-		case "hopeListOrderAction" :
+			break;
+		case "hopeListOrderAction":
 			a = new HopeListOrderAction();
-          	break;
-		case "hopeListpageAction" :
+			break;
+		case "hopeListpageAction":
 			a = new HopeListPageAction();
-          	break;
-		case "hopeListNextPageAction" :
+			break;
+		case "hopeListNextPageAction":
 			a = new HopeListNextPageAction();
 			break;
-			
-		case "hopeListPreviousPageAction" :
+		case "hopeListPreviousPageAction":
 			a = new HopeListPreviousPageAction();
 			break;
-			
-		case "updateHpriceAction" : 
+		case "updateHpriceAction":
 			a = new UpdateHpriceAction();
 			break;
-		case "deleteHpriceAction" :
+		case "deleteHpriceAction":
 			a = new DeleteHpriceAction();
 			break;
-		case "getLpriceFirstDayAction" :
+		case "getLpriceFirstDayAction":
 			a = new GetLpriceFirstDayAction();
 			break;
-			
-			
-		case "sendAction" :
+		case "sendAction":
 			a = new SendAction();
 			break;
-			
-		case "searchAction" :
+		case "searchAction":
 			a = new SearchAction();
 			break;
-		case "searchListAction" :
+		case "searchListAction":
 			a = new SearchListAction();
-			break;	
-			/*
-		case "pimgPreviousPageAction" :
+			break;
+		case "pimgPreviousPageAction":
 			a = new PimgPreviousPageAction();
 			break;
-		case "pimgNextPageAction" : 
+		case "pimgNextPageAction":
 			a = new PimgNextPageAction();
 			break;
-		case "pimgPageAction" :
+		case "pimgPageAction":
 			a = new PimgPageAction();
-			break;		
-		case "plistPreviousPageAction" :
+			break;
+		case "plistPreviousPageAction":
 			a = new PlistPreviousPageAction();
 			break;
-		case "plistNextPageAction" :
+		case "plistNextPageAction":
 			a = new PlistNextPageAction();
 			break;
-		case "plistPageAction" :
+		case "plistPageAction":
 			a = new PlistPageAction();
 			break;
-			*/
-		case "searchAppAction" :
+		case "searchAppAction":
 			a = new SearchAppAction();
 			break;
-			/*
-		case "pimgAppPageAction" :
+		case "pimgAppPageAction":
 			a = new PimgAppPageAction();
 			break;
-			*/
-		case "seizeTodayAppAction" :
+		case "seizeTodayAppAction":
 			a = new SeizeTodayAppAction();
 			break;
-		case "seizeTodayAppPageAction" :
+		case "seizeTodayAppPageAction":
 			a = new SeizeTodayAppPageAction();
 			break;
-			
-		default :
+		default:
 			a = new HomeUI();
-			break;		
+			break;
 		}
 		return a;
 	}
